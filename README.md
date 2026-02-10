@@ -4,6 +4,13 @@ Hands-on HTML projects built while learning web development through freeCodeCamp
 
 ---
 
+## 🎫 Event Hub  
+A structured HTML page designed to showcase upcoming and past events in an organized layout.  
+**Features:** Navigation links, event sections, anchor linking, semantic HTML  
+🔗 **Live Demo:** https://arunvankar03.github.io/HTML-freecodecamp/a-event-hub.html
+
+---
+
 ## 🍽️ Build a Recipe  
 Simple recipe webpage demonstrating structured content using HTML lists and sections.  
 **Features:** Ordered lists, unordered lists, headings, clean layout  
