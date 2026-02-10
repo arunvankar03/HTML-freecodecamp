@@ -25,6 +25,13 @@ HTML page showcasing and organizing embedded video content.
 
 ---
 
+## 🐱 Cat Blog Project  
+A simple HTML blog-style page presenting articles and images in a clean structured layout.  
+**Features:** Blog sections, images, headings, structured content layout  
+🔗 **Live Demo:** https://arunvankar03.github.io/HTML-freecodecamp/cat-blog-project.html
+
+---
+
 ## 🐱 Cat Photo App  
 Beginner HTML project introducing basic elements and page structure.  
 **Features:** Images, links, lists, forms, basic semantic HTML  
