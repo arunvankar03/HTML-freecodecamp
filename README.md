@@ -48,8 +48,8 @@ Beginner HTML project introducing basic elements and page structure.
 
 ## ⭐ Luxury 5-Star Hotel Feedback Form
 
-A premium 5-star feedback form with glassmorphism UI and interactive animations.
-Features: ⭐ Star rating • Dark mode • Success modal • Confetti • Responsive design
+A premium 5-star feedback form with glassmorphism UI and interactive animations.   
+Features: ⭐ Star rating • Dark mode • Success modal • Confetti • Responsive design   
 🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/hotel-feedback-form.html
 
 ---
