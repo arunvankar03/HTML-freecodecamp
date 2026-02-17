@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury 5-Star Hotel Feedback</title>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+:root{
+  --gold:#d4af37;
+  --darkGold:#b8962e;
+  --glass:rgba(255,255,255,0.12);
+  --border:rgba(255,255,255,0.25);
+  --text:#fff;
+  --bg:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+body.dark{
+  --bg:linear-gradient(135deg,#141e30,#243b55);
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:var(--bg);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  padding:20px;
+  color:var(--text);
+  transition:.4s ease;
+}
+
+/* Glass Card */
+.card{
+  backdrop-filter:blur(20px);
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:30px;
+  width:95%;
+  max-width:750px;
+  box-shadow:0 15px 60px rgba(0,0,0,.4);
+  animation:fadeIn .8s ease;
+}
+
+h1{text-align:center;margin-bottom:8px;}
+p{text-align:center;opacity:.8;font-size:14px;}
+
+.toggle{
+  text-align:right;
+  cursor:pointer;
+  color:var(--gold);
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+fieldset{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:18px;
+}
+
+legend{color:var(--gold);font-weight:bold;}
+
+label{display:block;margin-top:10px;}
+
+input,select,textarea{
+  width:100%;
+  padding:8px;
+  margin-top:5px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.15);
+  color:var(--text);
+}
+
+input:focus,textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 8px rgba(212,175,55,.6);
+}
+
+/* Inline radio & checkbox */
+.inline-group{
+  margin-top:6px;
+}
+
+.inline-group input{
+  width:auto;
+  margin-right:6px;
+}
+
+.inline-group label{
+  display:inline;
+  margin-right:15px;
+}
+
+/* ⭐ STAR RATING */
+.stars{
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:flex-end;
+}
+
+.stars input{
+  display:none;
+}
+
+.stars label{
+  font-size:24px;
+  color:#888;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label{
+  color:var(--gold);
+  transform:scale(1.2);
+}
+
+/* Button */
+button{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  background:var(--gold);
+  color:#111;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
+  transition:.3s;
+}
+
+button:hover{
+  background:var(--darkGold);
+  transform:translateY(-2px);
+}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  visibility:hidden;
+  opacity:0;
+  transition:.4s;
+}
+
+.modal.active{
+  visibility:visible;
+  opacity:1;
+}
+
+.modal-box{
+  background:#fff;
+  color:#111;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  width:90%;
+  max-width:350px;
+  animation:pop .3s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes pop{
+  from{transform:scale(.9);}
+  to{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<div class="toggle" onclick="toggleDark()">🌙 Toggle Mode</div>
+
+<h1>Luxury 5-Star Hotel Feedback</h1>
+<p>Your experience defines our excellence.</p>
+
+<form id="feedbackForm">
+
+<fieldset>
+<legend>Personal Information</legend>
+
+<label>Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Age</label>
+<input type="number" min="3" max="100">
+
+</fieldset>
+
+<fieldset>
+<legend>First Visit?</legend>
+
+<div class="inline-group">
+<input type="radio" name="visit" required>
+<label>Yes</label>
+</div>
+
+<div class="inline-group">
+<input type="radio" name="visit">
+<label>No</label>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend>Why Did You Choose Us?</legend>
+
+<div class="inline-group">
+<input type="checkbox">
+<label>Location</label>
+</div>
+
+<div class="inline-group">
+<input type="checkbox">
+<label>Reputation</label>
+</div>
+
+<div class="inline-group">
+<input type="checkbox">
+<label>Price</label>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend>Rate Our Service</legend>
+
+<div class="stars">
+<input type="radio" id="star5" name="rating" value="5" required>
+<label for="star5">★</label>
+<input type="radio" id="star4" name="rating" value="4">
+<label for="star4">★</label>
+<input type="radio" id="star3" name="rating" value="3">
+<label for="star3">★</label>
+<input type="radio" id="star2" name="rating" value="2">
+<label for="star2">★</label>
+<input type="radio" id="star1" name="rating" value="1">
+<label for="star1">★</label>
+</div>
+
+</fieldset>
+
+<label>Additional Comments</label>
+<textarea rows="4"></textarea>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="modal">
+<div class="modal-box">
+<h2>✨ Thank You!</h2>
+<p>Your luxury feedback has been received.</p>
+<button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+<script>
+const form=document.getElementById("feedbackForm");
+const modal=document.getElementById("modal");
+
+form.addEventListener("submit",function(e){
+e.preventDefault();
+if(form.checkValidity()){
+modal.classList.add("active");
+
+confetti({
+particleCount:250,
+spread:100,
+origin:{y:0.6}
+});
+
+form.reset();
+}
+});
+
+function closeModal(){
+modal.classList.remove("active");
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
