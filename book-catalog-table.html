@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Literature Masters</title>
+
+<style>
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --primary: #2563eb;
+  --header: #1e293b;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --gold: #f59e0b;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --primary: #60a5fa;
+  --header: #334155;
+  --border: #334155;
+  --success: #34d399;
+  --gold: #fbbf24;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--bg) 0%, #e2e8f0 100%);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.header p {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.stat {
+  background: rgba(37, 99, 235, 0.08);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+}
+
+.stat.booker {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--primary);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.table-card {
+  background: var(--card);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+thead {
+  background: linear-gradient(135deg, var(--header), #334155);
+  color: white;
+}
+
+th, td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(37, 99, 235, 0.04);
+}
+
+tbody tr:hover {
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.12), rgba(59, 130, 246, 0.12));
+  transform: translateX(8px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+}
+
+.book-title {
+  font-weight: 800 !important;
+  font-size: 1.05rem;
+  color: var(--header);
+  display: block;
+  line-height: 1.3;
+}
+
+.author {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.award {
+  color: var(--success);
+  font-weight: 700;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+tfoot {
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.15), rgba(16, 185, 129, 0.12));
+  color: var(--primary);
+}
+
+tfoot td {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    position: static;
+    text-align: right;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .table-card {
+    padding: 1.75rem;
+  }
+  
+  .book-title {
+    font-size: 1rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <button class="toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    🌙 Dark Mode
+  </button>
+  
+  <div class="header">
+    <h1>🇮🇳 Indian Literary Masters</h1>
+    <p>13 Essential Voices from India's Literary Renaissance</p>
+    
+    <div class="stats">
+      <div class="stat">📚 13 Books</div>
+      <div class="stat booker">🏆 4 Booker Winners</div>
+      <div class="stat">🌍 8+ Languages</div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Year</th>
+          <th>Awards/Notable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="book-title">Midnight's Children</span></td>
+          <td class="author">Salman Rushdie</td>
+          <td>Magical Realism</td>
+          <td>1981</td>
+          <td><span class="award">Booker Prize</span></td>
+        </tr>
+        <tr>
+          <td><span class="book-title">The God of Small Things</span></td>
+          <td class="author">Arundhati Roy</td>
+          <td>Literary Fiction</td>
+          <td>1997</td>
+          <td><span class="award">Booker Prize</span></td>
+        </tr>
+        <tr>
+          <td><span class="book-title">The White Tiger</span></td>
+          <td class="author">Aravind Adiga</td>
+          <td>Satire</td>
+          <td>2008</td>
+          <td><span class="award">Booker Prize</span></td>
+        </tr>
+        <tr>
+          <td><span class="book-title">The Inheritance of Loss</span></td>
+          <td class="author">Kiran Desai</td>
+          <td>Literary Fiction</td>
+          <td>2006</td>
+          <td><span class="award">Booker Prize</span></td>
+        </tr>
+        <tr>
+          <td><span class="book-title">Sacred Games</span></td>
+          <td class="author">Vikram Chandra</td>
+          <td>Crime Fiction</td>
+          <td>2006</td>
+          <td>Netflix Series</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">English, August</span></td>
+          <td class="author">Upamanyu Chatterjee</td>
+          <td>Satirical Fiction</td>
+          <td>1988</td>
+          <td>Cult Classic</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">Em and the Big Hoom</span></td>
+          <td class="author">Jerry Pinto</td>
+          <td>Family Drama</td>
+          <td>2012</td>
+          <td>Crossword Prize</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">The Lives of Others</span></td>
+          <td class="author">Neel Mukherjee</td>
+          <td>Political Fiction</td>
+          <td>2014</td>
+          <td>Booker Shortlist</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">Cobalt Blue</span></td>
+          <td class="author">Sachin Kundalkar</td>
+          <td>LGBT Fiction</td>
+          <td>2006</td>
+          <td>Film Adaptation</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">Kim</span></td>
+          <td class="author">Rudyard Kipling</td>
+          <td>Adventure</td>
+          <td>1901</td>
+          <td>India Classic</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">A Fine Balance</span></td>
+          <td class="author">Rohinton Mistry</td>
+          <td>Historical Fiction</td>
+          <td>1995</td>
+          <td>Giller Prize</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">Anandamath</span></td>
+          <td class="author">Bankim Chandra Chattopadhyay</td>
+          <td>Historical Romance</td>
+          <td>1882</td>
+          <td>Bengali Classic</td>
+        </tr>
+        <tr>
+          <td><span class="book-title">Poonachi</span></td>
+          <td class="author">Perumal Murugan</td>
+          <td>Rural Drama</td>
+          <td>2017</td>
+          <td>Tamil Masterpiece</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5">
+            <strong>13 Bold Masterpieces</strong> | 
+            <span class="award">4 Booker Winners</span> | 
+            Spanning 1882-2017 across India's literary landscape 🇮🇳✨
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  const toggle = document.querySelector('.toggle');
+  toggle.textContent = document.body.classList.contains('dark') ? 
+    '☀️ Light Mode' : '🌙 Dark Mode';
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+}
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+  document.querySelector('.toggle').textContent = '☀️ Light Mode';
+}
+</script>
+</body>
+</html>
