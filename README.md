@@ -11,6 +11,14 @@ A structured HTML page designed to showcase upcoming and past events in an organ
 
 ---
 
+## 🇮🇳 Indian Book Catalog
+
+A responsive table showcasing famous Indian books with modern styling and dark mode support.
+Features: Responsive layout • Sticky header • Hover effects • Dark mode toggle
+🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/book-catalog-table.html
+
+---
+
 ## 🍽️ Build a Recipe  
 Simple recipe webpage demonstrating structured content using HTML lists and sections.  
 **Features:** Ordered lists, unordered lists, headings, clean layout  
