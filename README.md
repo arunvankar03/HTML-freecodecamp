@@ -74,6 +74,13 @@ Features: Blockquotes, citations, semantic sections, clean typography
 
 ---
 
+📊 Tech Conference Schedule
+Professional responsive table with glassmorphism design & sticky headers.
+Features: Mobile card layout - Hover animations - Break highlighting - Dark theme
+🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/tech-conference-schedule.html
+
+---
+
 📝 Technical Blog    
 Professional semantic blog with modern gradient design & smooth navigation.  
 Features: Responsive layout - Hover animations - Smooth scrolling - Mobile-optimized   
