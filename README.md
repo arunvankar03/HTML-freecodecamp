@@ -74,9 +74,9 @@ Features: Blockquotes, citations, semantic sections, clean typography
 
 ---
 
-📊 Tech Conference Schedule
-Professional responsive table with glassmorphism design & sticky headers.
-Features: Mobile card layout - Hover animations - Break highlighting - Dark theme
+📊 Tech Conference Schedule    
+Professional responsive table with glassmorphism design & sticky headers.    
+Features: Mobile card layout - Hover animations - Break highlighting - Dark theme     
 🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/tech-conference-schedule.html
 
 ---
