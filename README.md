@@ -12,16 +12,15 @@ Features: Navigation links, event sections, anchor linking, semantic HTML
 ---
 
 📝 Survey Form
-FreeCodeCamp responsive survey with modern glassmorphism design.
-Features: HTML5 validation - Progress bar - Smooth animations
+FreeCodeCamp responsive survey with modern glassmorphism design.     
+Features: HTML5 validation - Progress bar - Smooth animations    
 🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/a-survey-form.html
 
 ---
 
-🇮🇳 Indian Book Catalog
-
-A responsive table showcasing famous Indian books with modern styling and dark mode support.
-Features: Responsive layout • Sticky header • Hover effects • Dark mode toggle
+🇮🇳 Indian Book Catalog    
+A responsive table showcasing famous Indian books with modern styling and dark mode support.     
+Features: Responsive layout • Sticky header • Hover effects • Dark mode toggle     
 🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/book-catalog-table.html
 
 ---
