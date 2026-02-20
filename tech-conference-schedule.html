@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Conference 2026 Schedule</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #e2e8f0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+      padding: 40px 20px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #94a3b8;
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    caption {
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 25px;
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      color: white;
+      text-align: left;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    }
+
+    th {
+      padding: 20px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f8fafc;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th:first-child {
+      border-radius: 16px 0 0 0;
+    }
+
+    th:last-child {
+      border-radius: 0 16px 0 0;
+    }
+
+    td {
+      padding: 20px 16px;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    tr:hover {
+      background: rgba(59, 130, 246, 0.15) !important;
+      transform: scale(1.01);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+    }
+
+    tr.break-row td {
+      background: linear-gradient(135deg, #059669, #10b981) !important;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    tr.break-row:hover td {
+      background: linear-gradient(135deg, #047857, #065f46) !important;
+      transform: none;
+    }
+
+    .time-col {
+      font-weight: 700;
+      color: #60a5fa;
+      width: 15%;
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      
+      h1 {
+        font-size: 2.2rem;
+        padding: 30px 20px;
+      }
+      
+      .container {
+        border-radius: 16px;
+        margin: 10px;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 15px 12px;
+      }
+      
+      .time-col {
+        width: 20%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      
+      tr {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 15px;
+        border-radius: 12px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      
+      td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 12px;
+        width: 45%;
+        font-weight: 600;
+        color: #60a5fa;
+      }
+      
+      .time-col {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tech Conference 2026 Schedule</h1>
+    <p class="subtitle">Ahmedabad Tech Summit | February 26-27, 2026</p>
+
+    <table>
+      <caption>📅 Schedule by Track and Time</caption>
+
+      <thead>
+        <tr>
+          <th scope="col" class="time-col">🕐 Time</th>
+          <th scope="col">Track A: Advanced</th>
+          <th scope="col">Track B: Fundamentals</th>
+          <th scope="col">Track C: Design</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">9:00 AM</th>
+          <td>Keynote: Future of Technology</td>
+          <td>Intro to Web Development</td>
+          <td>UX Design for Everyone</td>
+        </tr>
+
+        <tr>
+          <th scope="row">10:00 AM</th>
+          <td>Accessibility Deep Dive</td>
+          <td>CSS Fundamentals Workshop</td>
+          <td>Inclusive Design Principles</td>
+        </tr>
+
+        <tr class="break-row">
+          <th scope="row">11:00 AM</th>
+          <td colspan="3">☕ Coffee & Networking Break</td>
+        </tr>
+
+        <tr>
+          <th scope="row">11:30 AM</th>
+          <td>AR/VR in Education</td>
+          <td>JavaScript Fundamentals</td>
+          <td>Design Systems at Scale</td>
+        </tr>
+
+        <tr class="break-row">
+          <th scope="row">12:30 PM</th>
+          <td colspan="3">🍽️ Lunch & Networking</td>
+        </tr>
+
+        <tr>
+          <th scope="row">2:00 PM</th>
+          <td>Voice UI Development</td>
+          <td>Git & GitHub Essentials</td>
+          <td>Color Theory & Contrast</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
