@@ -11,7 +11,7 @@ Features: Navigation links, event sections, anchor linking, semantic HTML
 
 ---
 
-📝 Survey Form
+📝 Survey Form    
 FreeCodeCamp responsive survey with modern glassmorphism design.     
 Features: HTML5 validation - Progress bar - Smooth animations    
 🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/a-survey-form.html
@@ -74,7 +74,7 @@ Features: Blockquotes, citations, semantic sections, clean typography
 
 ---
 
-📝 Technical Blog
+📝 Technical Blog    
 Professional semantic blog with modern gradient design & smooth navigation.  
 Features: Responsive layout - Hover animations - Smooth scrolling - Mobile-optimized   
 🔗 Live Demo: https://arunvankar03.github.io/HTML-freecodecamp/technical-blog.html
